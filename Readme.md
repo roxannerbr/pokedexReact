@@ -1,0 +1,2 @@
+#POKEDEX logopok.png
+
