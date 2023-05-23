@@ -1,3 +1,3 @@
-<img src="./assets/logo.png" alt="" width=50%>
+Pokedex 2023
 
 Romaniello Roxana Belen
