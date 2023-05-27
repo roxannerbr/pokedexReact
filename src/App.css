@@ -5,11 +5,11 @@
   margin: 0;
   box-sizing: border-box;
 }
-/*font-family: 'Dosis', sans-serif;*/
-/*font-family: 'Orbitron', sans-serif;*/
 body{
   font-family: 'Dosis', sans-serif;
 }
+
+/* home */
 .home{
   width: 100vw;
   height: 100vh;
@@ -78,20 +78,10 @@ body{
   cursor: pointer;
   transform: scale(1.1);
 }
+/* app */
 header{
   width: 100%;
   position: relative;
-}
-.title{
-  position: absolute;
-  width: 80%;
-  max-width: 400px;
-  top: 15px;
-  left: 1rem;
-  transition: filter 1s;
-}
-.title:hover{
-  filter: sepia();
 }
 .yellow_stripe{
   background-color: rgb(228, 228, 28);
@@ -140,6 +130,8 @@ header{
   right: 40px;
   z-index: 2;
 }
+
+/* pokedex */
 .pokedex{
   width: 100%;
   position: relative;
@@ -194,6 +186,15 @@ header{
 input:focus{
   outline: none;
 }
+
+/* confi */
+.confi{
+  height: 59vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .confi button{
   width: 150px;
   height: 2rem;
@@ -208,6 +209,20 @@ input:focus{
   cursor: pointer;
   background: #0e2e42;
 }
+@keyframes confi {
+  10%{
+    rotate: (36deg);
+  }
+  
+  50%{
+    rotate: 180deg;
+  }
+  100%{
+    rotate: 360deg;
+  }
+}
+
+/* suggestions */
 .suggestions{
   position: absolute;
   border: 1px solid;
@@ -240,6 +255,8 @@ input:focus{
 .suggestions li:hover{
   cursor: pointer;
 }
+
+/* get */
 .pokemons__container{
   width: 100%;
   max-width: 1000px;
@@ -253,13 +270,6 @@ input:focus{
   margin: 0 auto;
   align-items: center;
 }
-.icon__confi{
-  filter: drop-shadow(3px 3px 2px black);
-  position: fixed;
-  bottom: 2rem;
-  right: 1rem;
-  z-index: 900;
-}
 .confi_type .bx{
   color: rgb(68, 68, 68);
 }
@@ -267,25 +277,12 @@ input:focus{
   animation: confi 3s infinite linear;
   cursor: pointer;
 }
-.bytype{
-  display: flex;
-  flex-direction: column;
-}
-select{
-  margin-bottom: 2rem;
-  height: 35px;
-  width: 12rem;
-  background: rgb(27, 27, 27) ;
-  padding: 0 1rem;
-  color: rgba(237, 241, 7, 0.7);
-  border-radius: 5px;
-  text-align: center;
-}
-option{
-  background-color: rgb(75, 74, 74);
-  border-radius: 5px;
-  padding: .2rem .5rem;
-  height: 2rem;
+.icon__confi{
+  filter: drop-shadow(3px 3px 2px black);
+  position: fixed;
+  bottom: 2rem;
+  right: 1rem;
+  z-index: 900;
 }
 .acces__container{
   width: 100%;
@@ -330,6 +327,30 @@ option{
   gap: 1.5rem;
   justify-content: center;
 }
+
+/* bt */
+.bytype{
+  display: flex;
+  flex-direction: column;
+}
+select{
+  margin-bottom: 2rem;
+  height: 35px;
+  width: 12rem;
+  background: rgb(27, 27, 27) ;
+  padding: 0 1rem;
+  color: rgba(237, 241, 7, 0.7);
+  border-radius: 5px;
+  text-align: center;
+}
+option{
+  background-color: rgb(75, 74, 74);
+  border-radius: 5px;
+  padding: .2rem .5rem;
+  height: 2rem;
+}
+
+/* card */
 .card{
   width: 280px;
   height: 180px;
@@ -407,6 +428,46 @@ option{
   display: flex;
   flex-direction: column;
 }
+@keyframes ball {
+  10%{
+    rotate: (36deg);
+    opacity: 1;
+    scale: 1;
+  }
+  25%{
+    rotate: 90deg;
+    opacity: .8;
+    scale: .9;
+  }
+  50%{
+    rotate: 180deg;
+    opacity: .6;
+    scale: .8;
+    filter: grayscale();
+  }
+  75%{
+    rotate: 270deg;
+    opacity: .8;
+    scale: .9;
+  }
+  100%{
+    rotate: 360deg;
+    opacity: 1;
+    scale: 1;
+  }
+}
+@keyframes pokemon {
+  0%{
+    scale: .3;
+  }
+  50%{
+    scale: .7;
+  }
+  100%{
+    scale: 1;
+  }
+}
+/* item */
 .item{
   width: 100%;
   max-width: 1000px;
@@ -562,11 +623,11 @@ option{
 .title_description h3:hover{
   cursor: pointer;
 }
-.description{
+ .description{
   width: 100%;
   height: 100%;
   background-color: #3b6e8d;
-}
+} 
 .moves, .abilities{
   padding: 1rem 3rem;
   background-color: #3b6e8d;
@@ -582,74 +643,7 @@ option{
   padding: .1rem .3rem;
   border-radius: 1rem;
 }
-.confi{
-  height: 59vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-footer{
-  height: 4rem;
-  width: 100%;
-  margin-top: 31rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #51585c;
-}
 
-@keyframes ball {
-  10%{
-    rotate: (36deg);
-    opacity: 1;
-    scale: 1;
-  }
-  25%{
-    rotate: 90deg;
-    opacity: .8;
-    scale: .9;
-  }
-  50%{
-    rotate: 180deg;
-    opacity: .6;
-    scale: .8;
-    filter: grayscale();
-  }
-  75%{
-    rotate: 270deg;
-    opacity: .8;
-    scale: .9;
-  }
-  100%{
-    rotate: 360deg;
-    opacity: 1;
-    scale: 1;
-  }
-}
-@keyframes pokemon {
-  0%{
-    scale: .3;
-  }
-  50%{
-    scale: .7;
-  }
-  100%{
-    scale: 1;
-  }
-}
-@keyframes confi {
-  10%{
-    rotate: (36deg);
-  }
-  
-  50%{
-    rotate: 180deg;
-  }
-  100%{
-    rotate: 360deg;
-  }
-}
 @media screen and (min-width: 624px) {
   .icon__confi{
     filter: drop-shadow(3px 3px 2px black);
